@@ -1,0 +1,45 @@
+---
+layout: default
+header_image: "/assets/images/bg/bg-portfolio.jpg"
+title: "Our Products"
+description: "We're here to help you get the most out of your DC charge station needs. Whether you have a question about our products, need assistance with installation, or just want to learn more about how we can help you electrify your fleet, we're here to answer your questions."
+---
+
+{% include page_header.html %}
+<!-- Portfolio  Start -->
+<section class="section portfolio-5">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center">
+				<span class="h5 text-color text-uppercase">
+					our works
+				</span>
+				<h3 class="mb-5 mt-2">Wide Grid Portfolio</h3>
+			</div>
+		</div>
+
+    <div class="row align-items-center mb-5">
+      	<div class="col-12 text-center">
+	        <div class="btn-group btn-group-toggle " data-toggle="buttons">
+	          <label class="btn border-0 active">
+	            <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Projects
+	          </label>
+						{% assign categories = site.portfolios| map: 'categories' | join: ',' | split: ',' | uniq %}
+						{% for category in categories %}
+						<label class="btn border-0">
+							<input type="radio" name="shuffle-filter" value="{{ category | downcase | slugify }}" />{{ category }}
+						</label>
+						{% endfor %}
+	        </div>
+      </div>
+    </div>    
+  </div>		
+
+
+  <div class="container-fluid">
+    <div class="row shuffle-wrapper portfolio-gallery">
+      {% include portfolio_loop.html %}
+    </div>
+	</div>
+</section>
+<!-- Portfolio  End -->

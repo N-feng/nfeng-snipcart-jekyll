@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-<body class="text-red-500">
- {% include header.html %}
- <main class="main">
- <div class="products">
- {{ content }}
- </div>
- </main>
+<html lang="en">
+{% include head.html %}
+
+<body data-spy="scroll" data-target="#ftco-navbar-spy" data-offset="0" class="">
+
+   {% include header.html %}
+   {{content}}
+   {% include footer.html %}
+   <div hidden id="snipcart" data-api-key="NjAyMGM4MTYtNTc2MS00NDY2LTk4ZTEtMDhiMWEyOWVkZjViNjM4Mjg4MTAzNzAzMzc1OTc1"></div>
+   <script src="https://cdn.snipcart.com/themes/v3.0/default/snipcart.js" defer></script>
 </body>
-<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css" />
-<script async src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js"></script>
-<div id="snipcart" data-api-key="Your snipcart API token here" hidden></div>
 </html>
