@@ -1,11 +1,11 @@
 ---
-layout: portfolio
+layout: product_overviews
 title: "New Branding"
 categories: ["Branding"]
-thumbnail: "/assets/images/portfolio/p-3.jpg"
+thumbnail: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
 identifier: jekyll-idea-2
-name: Concept2
-price: 19.99
+name: Concept3
+price: 29.99
 image: /assets/images/portfolio/p-6.jpg
 description: "tempor incididunt labore et dolore magna aliqua enim minim veniam quis nostrud exercitation ullamco laboris nisi aliquip commodo consequat.duis aute irure"
 ---
