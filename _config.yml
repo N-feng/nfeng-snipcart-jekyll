@@ -1,5 +1,5 @@
-baseurl: "/nfeng-snipcart-jekyll" # the subpath of your site, e.g. /blog
 url: "https://n-feng.github.io" # the base hostname & protocol for your site, e.g. http://example.com or  https://Dizerjk.netlify.com
+baseurl: "/nfeng-snipcart-jekyll" # the subpath of your site, e.g. /blog
 title: "Electrify Your Operations - EV DC Charging Solutions for a Greener Future"
 email: "info@evdcmate.com"
 phone: "+86 186 1615 2997"
