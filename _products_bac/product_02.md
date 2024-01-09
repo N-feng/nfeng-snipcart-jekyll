@@ -1,5 +1,5 @@
 ---
-layout: product_overviews
+layout: portfolio
 title: "New Branding"
 categories: ["Branding"]
 thumbnail: "/assets/images/portfolio/p-4.jpg"
