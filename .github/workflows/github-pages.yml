@@ -32,8 +32,8 @@ jobs:
       #   uses: limjh16/jekyll-action-ts@v2
       #   with:
       #     enable_cache: true
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GH_PAGE_ACTION_TOKEN }}
-      #     publish_dir: ./_site
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAGE_ACTION_TOKEN }}
+          publish_dir: ./_site
