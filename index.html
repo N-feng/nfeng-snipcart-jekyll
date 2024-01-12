@@ -1,14 +1,616 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Our Blog</title>
 
-{% include hero_area.html %}
-{% include services.html %}
-{% include about.html %}
-{% include portfolios.html %}
-{% include count_down.html %}
-{% include skills.html %}
-{% include testimonials.html %}
-{% include clients.html %}
-{% include team.html %}
-{% include blog.html %}
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis.">
+    
+  
+  <meta name="author" content="">
+  
+
+  
+  <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="/assets/plugins/themify/css/themify-icons.css">
+  
+  <link rel="stylesheet" href="/assets/plugins/magnific-popup/magnific-popup.css">
+  
+  <link rel="stylesheet" href="/assets/plugins/slick-carousel/slick/slick.css">
+  
+
+  <!-- TailwindCSS and Inter Font-->
+  <!-- <link rel="stylesheet" href="/assets/css/tailwind.css"> -->
+  <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> -->
+
+  <!-- Main Stylesheet -->
+  <link href="/assets/scss/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/scss/main.css">
+  <link rel="stylesheet" href="/assets/scss/tailwind.css">
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0/default/snipcart.css" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/assets/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="/assets/images/favicon.png " type="image/x-icon">
+  
+</head>
+
+
+<body data-spy="scroll" data-target="#ftco-navbar-spy" data-offset="0" class="text-red-500">
+
+   <nav class="navbar navbar-expand-lg fixed-top main-nav" id="main-nav" style="z-index: 19;">
+	<div class="container">
+		<a class="navbar-brand" href="/">
+			<img src="/assets/images/logo.png" alt="Electrify Your Operations - EV DC Charging Solutions for a Greener Future" class="img-fluid">
+		</a>
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation"
+			aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		</button>
+		<div class="collapse1 navbar-collapse" id="navigation">
+			<ul class="navbar-nav ml-auto text-center">
+  
+  
+
+  
+
+  
+
+  <li class="nav-item ">
+    <a class="nav-link"  href="/index.html">Home</a>
+    
+  </li>
+  
+  
+
+  
+
+  
+
+  <li class="nav-item ">
+    <a class="nav-link"  href="/products.html">Products</a>
+    
+  </li>
+  
+  
+
+  
+
+  
+
+  <li class="nav-item ">
+    <a class="nav-link"  href="/why-us.html">Why Us</a>
+    
+  </li>
+  
+  
+
+  
+
+  
+
+  <li class="nav-item ">
+    <a class="nav-link"  href="/about.html">About</a>
+    
+  </li>
+  
+  
+
+  
+
+  
+
+  <li class="nav-item ">
+    <a class="nav-link"  href="/blog.html">Blog</a>
+    
+  </li>
+  
+  
+
+  
+
+  
+
+  <li class="nav-item ">
+    <a class="nav-link"  href="/contact.html">Contact</a>
+    
+  </li>
+  
+</ul>
+		</div>
+		<div class="header__actions">
+			<button class="snipcart-customer-signin login-button">My account</button>
+			<button class="header__checkout snipcart-checkout">
+			  <svg width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+				  d="M1.10512 0.368718C0.560256 0.368718 0.118164 0.812066 0.118164 1.35848C0.118164 1.9049 0.560256 2.34824 1.10512 2.34824H4.90887L8.30138 18.4009C8.43503 19.0053 8.83085 19.5079 9.32946 19.5041H25.7788C26.3005 19.5118 26.7799 19.0375 26.7799 18.5143C26.7799 17.9911 26.3006 17.5168 25.7788 17.5245H10.1315L9.71003 15.545H27.095C27.5371 15.5412 27.9547 15.2048 28.0511 14.7718L30.354 4.87412C30.4825 4.29933 29.9852 3.67172 29.3979 3.66786H7.21171L6.6771 1.15221C6.58329 0.71276 6.15921 0.368652 5.7107 0.368652L1.10512 0.368718ZM7.623 5.64746H12.7634L13.2569 8.61674H8.25005L7.623 5.64746ZM14.7785 5.64746H20.9881L20.4946 8.61674H15.2719L14.7785 5.64746ZM23.0031 5.64746H28.1537L27.4649 8.61674H22.5097L23.0031 5.64746ZM8.67181 10.5963H13.5862L14.0797 13.5656H9.29919L8.67181 10.5963ZM15.6009 10.5963H20.1656L19.6721 13.5656H16.0944L15.6009 10.5963ZM22.1807 10.5963H27.0023L26.3135 13.5656H21.6872L22.1807 10.5963ZM12.6197 20.164C10.8141 20.164 9.32979 21.6525 9.32979 23.4632C9.32979 25.2739 10.8141 26.7624 12.6197 26.7624C14.4252 26.7624 15.9095 25.2739 15.9095 23.4632C15.9095 21.6525 14.4252 20.164 12.6197 20.164ZM22.4892 20.164C20.6837 20.164 19.1994 21.6525 19.1994 23.4632C19.1994 25.2739 20.6837 26.7624 22.4892 26.7624C24.2948 26.7624 25.7791 25.2739 25.7791 23.4632C25.7791 21.6525 24.2948 20.164 22.4892 20.164ZM12.6197 22.1435C13.3586 22.1435 13.9356 22.7222 13.9356 23.4632C13.9356 24.2042 13.3586 24.7829 12.6197 24.7829C11.8807 24.7829 11.3037 24.2042 11.3037 23.4632C11.3037 22.7222 11.8807 22.1435 12.6197 22.1435ZM22.4892 22.1435C23.2282 22.1435 23.8052 22.7222 23.8052 23.4632C23.8052 24.2042 23.2282 24.7829 22.4892 24.7829C21.7503 24.7829 21.1733 24.2042 21.1733 23.4632C21.1733 22.7222 21.7503 22.1435 22.4892 22.1435Z"
+				  fill="#9094FF" class="header__checkout-fill"></path>
+			  </svg>
+			  <span class="snipcart-total-price"></span>
+			</button>
+		</div>
+</nav>
+   <!-- Slider Start -->
+
+<section class="banner position-relative">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="banner-content">
+					<h2 class="text-white">EV DC Mate</h2>
+					<p class="text-white mt-4 mb-5">Power Up Your Fleet<br>DC Charge Stations for Businesses</p>
+					
+					<a href="/contact" class="btn btn-secondary">Contact Us</a>
+					
+				</div>
+			</div>
+			<div class="banner-img d-none d-lg-block">
+				<img src="/assets/images/banner/charger-banner.png" alt="contact" class="img-fluid">
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Slider End -->
+<!-- Service Start -->
+
+
+<section class="section-sm service bg-secondary">
+	<img src="/assets/images/bg/feature-bg.png" alt="" class="overlay-shape">
+	<div class="container">
+		<div class="row justify-content-center">
+			
+			<div class="col-lg-4 col-md-6">
+				<div class="service-item mb-4 mb-lg-0">
+					<i class="ti-ruler-pencil text-color"></i>
+					<h4 class="my-4 text-white">Standard Service</h4>
+					<p>All-in-one EV charging solutions featuring AC and DC charge piles and stations.</p>
+
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6">
+				<div class="service-item mb-4 mb-lg-0">
+					<i class="ti-announcement text-color"></i>
+					<h4 class="my-4 text-white">ODM Service</h4>
+					<p>Our ODM service helps businesses develop and manufacture customized EV DC charge stations efficiently..</p>
+
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6">
+				<div class="service-item mb-4 mb-lg-0">
+					<i class="ti-palette text-color"></i>
+					<h4 class="my-4 text-white">OEM Service</h4>
+					<p>Empower your EV charging vision with custom OEM solutions: Reliable, Efficient and Tailored.</p>
+
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+<!-- Service End -->
+<!-- About Start -->
+
+
+<section class="section about overflow-hidden">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="about-img">
+					<img src="/assets/images/about/about.jpg" alt="" class="img-fluid w-100">
+					<div class="video-play">
+						<div class="play-bg">
+							<a class="popup-youtube" href=""><i class="ti-control-play"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-7 offset-lg-1 mt-5 mt-md-0">
+				<span class="text-color h5 text-uppercase">About Us</span>
+				<h3 class="mb-4 mt-3">We are EV DC charge stations <br> Manufacturer & Provider.</h3>
+				<p>EV DC Mate is a professional enterprise dedicated to the research and development of electric vehicle (EV) charging solutions. With a robust R&amp;D team, we have established a comprehensive product line encompassing AC/DC equipment, intelligent AC/DC charging solutions, conversion technologies, and comprehensive customer support services.
+EV DC Mate is committed to providing exceptional products and tailored services to each customer. We aspire to be the most proficient and efficient EV charging manufacturer in the industry. Currently, our products are compatible with the majority of vehicle models worldwide, and we continuously update our offerings to ensure safe and efficient EV charging solutions.
+EV DC Mate delivers safe, reliable, and intelligent EV charging products and components to our global clients. Our offerings include EV plugs, sockets, connectors, chargers, and high-power DC charging stations. Our connectors are CE/UL/TUV/CB certified, and our products are widely distributed worldwide.
+EV DC Mate is your trusted partner for innovative and dependable EV charging solutions.</p>
+
+				
+				<a href="/contact" class="btn btn-primary">Get Quote</a>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- About End -->
+<!-- PortfoliO Start -->
+<section class="section portfolio">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center">
+				<span class="h5 text-color text-uppercase">
+					our projects
+				</span>
+				<h3 class="mb-5 mt-2">Take a Look Around Our Portfolio</h3>
+			</div>
+		</div>
+		<div class="row shuffle-wrapper portfolio-gallery">
+			
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;branding&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-3.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/branding_01">
+            <h5 class="mb-0 text-white">New Branding</h5>
+            <p> Branding </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;branding&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-4.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/branding_02">
+            <h5 class="mb-0 text-white">Branding Special</h5>
+            <p> Branding </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;design&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-5.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/design_01">
+            <h5 class="mb-0 text-white">Paintaining</h5>
+            <p> Design </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;design&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-6.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/design_02">
+            <h5 class="mb-0 text-white">Designing</h5>
+            <p> Design </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;design&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-6.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/design_03">
+            <h5 class="mb-0 text-white">Paintaining</h5>
+            <p> Design </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;web-development&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-2.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/photography_01">
+            <h5 class="mb-0 text-white">Photography</h5>
+            <p> Web Development </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;photography&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-5.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/photography_02">
+            <h5 class="mb-0 text-white">Drawing</h5>
+            <p> Photography </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;photography&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-3.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/photography_03">
+            <h5 class="mb-0 text-white">Paintaining</h5>
+            <p> Photography </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-6 mb-4 shuffle-item" data-groups="[ &quot;web-development&quot;  ]">
+  <div class="position-relative inner-box">
+    <div class="image position-relative ">
+      <img src="/assets/images/portfolio/p-2.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+      <div class="overlay-box">
+        <div class="overlay-inner">
+          <a class="overlay-content text-center" href="/portfolios/web_development_01">
+            <h5 class="mb-0 text-white">Development</h5>
+            <p> Web Development </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+		</div>
+	</div>
+</section>
+<!-- Portfolio End -->
+<!-- Counter Start -->
+
+
+<section class="section-sm counter-section bg-secondary position-relative">
+	<img src="/assets/images/bg/cta-bg.png" alt="" class="overlay-shape">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-lg-3 col-md-6">
+				<div class="counter-content d-flex mb-5 mb-lg-0">
+					<i class="ti-briefcase mr-4"></i>
+					<div>
+						<h2 class="mb-0"><span class="counter">370</span></h2>
+						<p class="text-capitalize mb-0">work completed</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-3 col-md-6">
+				<div class="counter-content d-flex mb-5 mb-lg-0">
+					<i class="ti-paint-bucket mr-4"></i>
+					<div>
+						<h2 class="mb-0"><span class="counter">450</span></h2>
+						<p class="text-capitalize mb-0">new projects</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-3 col-md-6">
+				<div class="counter-content d-flex mb-5 mb-lg-0">
+					<i class="ti-heart mr-4"></i>
+					<div>
+						<h2 class="mb-0"><span class="counter">1000+</span></h2>
+						<p class="text-capitalize mb-0">Happy customers</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-3 col-md-6">
+				<div class="counter-content d-flex mb-5 mb-lg-0">
+					<i class="ti-cup mr-4"></i>
+					<div>
+						<h2 class="mb-0"><span class="counter">22</span></h2>
+						<p class="text-capitalize mb-0">awards win</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- Counter End -->
+
+<!-- Slill Start -->
+
+
+<!-- Testimonial Start -->
+
+
+<!-- Clients Start -->
+
+
+<!-- Clients End -->
+<!-- Team Start -->
+
+
+<!-- Team End -->
+<!-- Blog Start -->
+<section class="section latest-blog position-relative overflow-hidden">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<span class="h5 text-color text-uppercase">
+					latest article
+				</span>
+				<h3 class="mb-5 mt-2">Stay Update with dizer.</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			
+			<div class="col-lg-4 col-md-6  mb-4 mb-lg-0">
+				
+				<a href="/welcome-to-jekyll.html">
+					<h4 class="mt-4 mb-2">Welcome to Jekyll!</h4>
+				</a>
+				<div class="post-meta text-uppercase mb-3">
+					
+					
+					<span class="text-color">/ 03 January 2024</span>
+					
+				</div>
+				<p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your...</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- Blog End -->
+   <!-- Footer section start -->
+<footer class="section bg-secondary position-relative pb-0">
+	<img src="/assets/images/bg/footer-bg.png" alt="" class="overlay-shape">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="footer-widget  mb-5 mb-lg-0">
+					<h4 class="font-weight-bold text-white mb-3">About Us</h4>
+					<p>We aspire to be the most proficient and efficient EV charging manufacturer in the industry.</p>
+
+
+					<ul class="list-inline socials-links">
+						
+						<li class="list-inline-item mb-2">
+							<a target="_blank" href="#" class="active"><i class="ti-facebook"></i></a>
+						</li>
+						
+						<li class="list-inline-item mb-2">
+							<a target="_blank" href="#" class="active"><i class="ti-twitter-alt"></i></a>
+						</li>
+						
+						<li class="list-inline-item mb-2">
+							<a target="_blank" href="#" class="active"><i class="ti-linkedin"></i></a>
+						</li>
+						
+						<li class="list-inline-item mb-2">
+							<a target="_blank" href="#" class="active"><i class="ti-pinterest"></i></a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-lg-3 ml-lg-auto mb-5 mb-lg-0 col-md-6">
+				<div class="footer-widget">
+					<h4 class="text-white mb-3">Navigation</h4>
+
+					<ul class="list-unstyled lh-38">
+						
+						<li><a href="">Services</a></li>
+						
+						<li><a href="">Portfolio One</a></li>
+						
+						<li><a href="">Portfolio Two</a></li>
+						
+						<li><a href="">Single Portfolio</a></li>
+						
+						<li><a href="">Contact</a></li>
+						
+					</ul>
+				</div>
+			</div>		
+			<div class="col-lg-2 col-md-6">
+				<div class="footer-widget  mb-5 mb-lg-0">
+					<h4 class="text-white mb-3">Services</h4>
+					<ul class="list-unstyled lh-38">
+						<li><a href="#">Brand Design</a></li>
+						<li><a href="#">seo & marketing</a></li>
+						<li><a href="#">creative design</a></li>
+						<li><a href="#">photography</a></li>
+						<li><a href="#">print design</a></li>
+					</ul>
+				</div>
+			</div>		
+			<div class="col-lg-3 col-md-6">
+				<div class="footer-widget">
+					<h4 class="text-white mb-3">Contact Info</h4>
+					<ul class="list-unstyled lh-38">
+						<li>9567 Turner Trace Apt. 466 North Willie, BC C3G8A4</li>
+						<li><a href="tel:+86 186 1615 2997">+86 186 1615 2997</a></li>
+						<li><a href="mailto:info@evdcmate.com">info@evdcmate.com</a></li>
+					</ul>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="footer-btm ">
+		<div class="container border-top py-4 mt-5">
+			<div class="row align-items-center justify-content-md-between">
+				<div class="col-12 col-lg-4">
+					<div class="text-center text-lg-left "> <span>EVDCMATE. &copy; 2023 All Right Reserved</span></div>
+				</div>
+				<div class="col-lg-4 text-center col-12">
+					<a href="">
+						<img src="/assets/images/logo.png" alt="Electrify Your Operations - EV DC Charging Solutions for a Greener Future" class="img-fluid">
+					</a>
+				</div>
+				<div class="col-lg-4 col-12">
+					<div class="text-center text-lg-right">
+						
+						<a href="/">Terms of Service  <span class="mx-2">|</span> </a>
+						
+						<a href="/">Privacy Policy </a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Footer End -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnh74UN6BKgq9U5fMNGhdZOSpmM_QnZqs"></script>
+
+<!-- JS Plugins -->
+
+<script src="/assets/plugins/jQuery/jquery.min.js"></script>
+
+<script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="/assets/plugins/slick-carousel/slick/slick.min.js"></script>
+
+<script src="/assets/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="/assets/plugins/magnific-popup/magnific-popup.min.js"></script>
+
+<script src="/assets/plugins/google-map/gmap.js"></script>
+
+<script src="/assets/plugins/search/search.min.js"></script>
+
+
+<!-- Main Script -->
+<script src="/assets/js/script.js"></script>
+   <div hidden id="snipcart" data-api-key="NjAyMGM4MTYtNTc2MS00NDY2LTk4ZTEtMDhiMWEyOWVkZjViNjM4Mjg4MTAzNzAzMzc1OTc1"></div>
+   <script src="https://cdn.snipcart.com/themes/v3.0/default/snipcart.js" defer></script>
+</body>
+</html>
