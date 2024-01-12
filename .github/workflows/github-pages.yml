@@ -23,15 +23,10 @@ jobs:
         with:
           node-version: '18'
       - run: npm install
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-      # - name: Build site
-      #   uses: limjh16/jekyll-action-ts@v2
-      #   with:
-      #     enable_cache: true
+      - name: Build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
